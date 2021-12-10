@@ -74,6 +74,7 @@ include("adminhandlers/getinstructor.php");
                     <label for="exampleInputEmail1">Category</label>
                     <p><?=$course['catname'];?></p>
                    <select name="cat" class="form-control" id="exampleInputEmail1">
+		     <option value="<?=$course['catid'];?>"><?=$course['catname'];?></option>
                      <?php while($cat=mysqli_fetch_assoc($catsSql)) {?>
                      <option value="<?=$cat['id'];?>"><?=$cat['name'];?></option>
                      <?php } ?>
@@ -91,6 +92,7 @@ include("adminhandlers/getinstructor.php");
                     <label for="exampleInputEmail1">Instructor</label>
                     <p><?=$course['insname'];?></p>
                     <select name="instructor" class="form-control" id="exampleInputEmail1">
+		   <option value="<?=$course['insid'];?>"><?=$course['insname'];?></option>
                      <?php while($instr=mysqli_fetch_assoc($instructorSql)) {?>
                      <option value="<?=$instr['id'];?>"><?=$instr['name'];?></option>
                      <?php } ?>
